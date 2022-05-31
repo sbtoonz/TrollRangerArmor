@@ -31,6 +31,7 @@ namespace ArmorMod
         public static ConfigEntry<float> configMaxDurabilityVest;
         public static ConfigEntry<float> configDurabilityPerLevelVest;
         public static ConfigEntry<int> configMaxLevelVest;
+
         public static ConfigEntry<float> configArmorLegs;
         public static ConfigEntry<float> configArmorPerLevelLegs;
         public static ConfigEntry<float> configDurabilityLegs;
@@ -168,7 +169,7 @@ namespace ArmorMod
                 var itemDropL = pants.ItemDrop;
                     itemDropL.m_itemData.m_shared.m_armor = configArmorLegs.Value;
                     itemDropL.m_itemData.m_shared.m_armorPerLevel = configArmorPerLevelLegs.Value;
-                    itemDropL.m_itemData.m_shared.m_armor = configArmorLegs.Value;
+                    itemDropL.m_itemData.m_durability = configDurabilityLegs.Value;
                     itemDropL.m_itemData.m_shared.m_maxDurability = configMaxDurabilityLegs.Value;
                     itemDropL.m_itemData.m_shared.m_durabilityPerLevel = configDurabilityPerLevelLegs.Value;
                     itemDropL.m_itemData.m_shared.m_maxQuality = configMaxLevelLegs.Value;
